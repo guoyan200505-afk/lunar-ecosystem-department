@@ -230,6 +230,139 @@ MINISTERS = {
     "luo":    {"name": "罗部长",      "talents": [("explore",   "top")], "desc": "顶级探索（探索收获 ×3）"},
     "guo":    {"name": "郭部长",      "talents": [("entertain", "top")], "desc": "顶级娱乐（每天全员 +2% 心情）"},
 }
+# ============================================================
+# 🆕 【部长数据库：形象、教程协议、常驻百科与动态警告】
+# ============================================================
+MINISTER_DATA = {
+    "Annie部长": {
+        "init_img": "Annie initialize.png", "game_img": "Annie in game.png", "style": "Annie部长（温柔专业）",
+        "intro": "指挥官您好，我是Annie。深空生存容不得一点差错，我会耐心协助您构建最稳固的月球居所。",
+        "tutorial": {
+            "T0": "欢迎指挥官！为了确保您的基地不在第 10 天就因为 CO₂ 中毒或断水崩溃，请完成以下模拟训练：\n\n- **协议-大气修复**：学会开启空气净化洗涤器。\n- **协议-闭环补给**：播种作物并观察废水消耗与物质循环。\n- **协议-能源调度**：扩展太阳能板，观察电池充电。\n- **协议-人才管理**：将“科研型”乘员指派到实验室。\n\n提示：模拟期间系统已下发 3 个补给医疗包。",
+            "T1": "【阶段 1：呼吸】指挥官，深呼吸。现在舱内 CO₂ 浓度超标，大家开始咳嗽了。除了依赖被动过滤，我们需要主动出击！请去侧边栏找到【🦠 微藻光水调控】，尝试增加废水通量或拉满光照时长，然后点击【⏳ 闭环演进】利用光合作用吃掉 CO₂！",
+            "T2": "【阶段 2：温饱】食物要见底了，系统发出了警报！请立刻去左侧边栏【批次农业播种中心】播种些小麦或土豆，注意观察水分流失。收获后残渣会被丢进【堆肥舱】。‘化肥-作物-废物’的闭环运作起来，我们才有长久的温饱。",
+            "T3": "【阶段 3：生存】警报！电池电量仅剩5%！如果不采取行动，基地即将断电！请立即在侧边栏扩展【坑外光伏阵列】，或者在实验室研发‘自动化机器人维护’来降低基础水耗。活下去，能源是关键。",
+            "T4": "【阶段 4：成长】基地规模达到瓶颈，我们需要更强的防护。系统已紧急为您空投并展开了一座【实验室】！请去侧边栏【🔬 科研课题立项】派人研发‘ISRU月壤复合材料’。",
+            "T5": "【崩溃预演】指挥官，如果刚刚断电，您的基地会发生什么？\n\n🚨 **模拟推演日志**：\n> **Day X**: 主电源中断，水循环泵停止。\n> **Day X+1**: 温室失去补光，作物全部枯死，氧气停止产出。\n> **Day X+2**: 失去热控，温度骤降导致舱体(Hull)出现裂缝。\n> **Day X+3**: 大气向真空泄漏，全员缺氧阵亡。\n\n您看到的每一个指标都牵动着全员生死。天外家园的命运，交给你了！"
+        },
+        "help": {
+            "居住舱": "居住舱是我们休息的港湾，每个舱能容纳 2 人。建得太少大家会觉得拥挤，但盲目扩建会增加基础维护水耗。",
+            "温室舱": "生态引擎的核心！每个温室不仅能容纳 2 人，还能大幅提升全员心情，并成倍增加光合作用产出。",
+            "种植舱": "口粮的来源。每增加一个种植舱，我们就能各种植 80kg 的作物，它是我们建立碳水闭环的起点。",
+            "堆肥舱": "千万别嫌脏，这里是变废为宝的地方。它能把固体废物和废水降解成肥料，没有它，植物就会饿死。",
+            "实验室": "科技是第一生产力。建成后，把有科研天赋的人派进去，无论是研究更厚的护甲还是更高效的微藻，全靠它了。",
+            "微藻光水调控": "微藻是我们最高效的“生物滤水器”和“氧气发生器”。调节废水通量和光照，控制它的生长节奏是门艺术。",
+            "电力系统": "太阳能是生命线。没电就没光，没光植物就死。遇到紧急情况可以烧垃圾发电，但小心 CO₂ 超标。",
+            "招募系统": "人多力量大，但前提是你有足够的床位、口粮和水。随便招人只会让基地更快崩溃。",
+            "灾难系统": "外面太危险了。月壤护甲能帮我们挡住微流星体和辐射。一旦舱体受损，必须立刻派人去修理。",
+            "健康系统": "身体和心理同样重要。生病必须休息吃药，心情跌到底可是会引发叛逃的。"
+        },
+        "warnings": {
+            "co2": "指挥官，CO₂ 浓度已达到毒性临界值！大家已经出现眩晕症状，请立刻检查 CDRA 供电或烧掉多余垃圾！",
+            "o2": "氧气流失严重！监测到多名乘员出现窒息特征，请立刻调节微藻或播种作物！",
+            "water": "净水储备跌破红线！没有水我们撑不过三天，请立刻派人出舱采集或检查微藻净化效率！",
+            "food": "口粮即将断绝！饥荒正在基地蔓延，温室里还有什么能吃的吗？",
+            "hull": "警告！壳体结构完整性严重受损！再不派人去修理，我们全都要暴露在真空里了！",
+            "crew": "指挥官，请关注大家的状况，有人已经处于伤病或崩溃的边缘，我们需要他们活着！"
+        }
+    },
+    "郭部长": {
+        "init_img": "Guo initialize.png", "game_img": "Guo in game.png", "style": "郭部长（幽默轻松）",
+        "intro": "哟，指挥官，我是郭部长。在这儿，活下去比什么都重要，当然，别忘了找点乐子。",
+        "tutorial": {
+            "T0": "欢迎上任！为了防止您在头十天就把我们团灭，先走个过场做下模拟训练吧：\n\n- **协议-大气修复**：别憋死自己，学会开空气洗涤器。\n- **协议-闭环补给**：种地、浇水、收菜、堆肥，搞懂这套流程。\n- **协议-能源调度**：搞点太阳能板，没电连游戏都没法打。\n- **协议-人才管理**：别让种地的去搞科研，学会分配天赋。\n\n提示：白送你 3 个医疗包，省着点用啊！",
+            "T1": "【阶段 1：呼吸】咳咳...想大口呼吸新鲜空气？盯紧 CO₂ 浓度！光靠机器洗空气可不行，去侧边栏把【🦠 微藻光水调控】的光照拉满，让那帮绿油油的小东西赶紧干活！调好后点【⏳ 闭环演进】推演一天试试！",
+            "T2": "【阶段 2：温饱】肚子饿了？系统警报都响了！赶紧去左边播种！种田会掉水，吃剩的丢进堆肥舱。‘化肥-作物-废物’的闭环不转起来，我们就只能吃土了。",
+            "T3": "【阶段 3：生存】没电连游戏都没法打。电池就剩5%了大哥！去侧边栏多造点太阳能板，要是停电导致作物全枯死，整个基地就准备歇菜吧。",
+            "T4": "【阶段 4：成长】不想被陨石砸成筛子，就赶紧搞‘ISRU科研’！我已经托关系给你空降了一座【实验室】，赶紧把那些戴眼镜的科研天才派进去立项干活！",
+            "T5": "【崩溃预演】想知道乱来的下场吗？\n\n🚨 **死法展示**：\n> 一旦断电 ➡️ 没光照 ➡️ 植物死光 ➡️ 没吃没喝没氧气 ➡️ 温度降到绝对零度 ➡️ 舱体冻裂 ➡️ 大家一起变太空垃圾。\n\n所以，求求你盯紧资源表，别让我们集体扑街！拿上急救药，好自为之！"
+        },
+        "help": {
+            "居住舱": "睡觉的地方。别把大家像沙丁鱼一样塞在一起，建多了又费水，抠搜点建。",
+            "温室舱": "多造点这玩意儿！除了能种地，还能改善大家的心情，不然我们天天只能看石头解闷。",
+            "种植舱": "我们的“太空菜园子”。记住，种菜是要消耗废水的，千万别干涸了。",
+            "堆肥舱": "俗称“造粪机回收站”。虽然听着恶心，但没它生产化肥，咱们连土都没得吃。",
+            "实验室": "学霸们的快乐老家。把那些戴眼镜的书呆子塞进去，我们的护甲和技术全指望他们了。",
+            "微藻光水调控": "绿油油的救命稻草。把废水灌进去，光照拉满，氧气和净水就源源不断地来了。",
+            "电力系统": "没电就没光，没光植物就死，植物死了我们就憋死。懂这连环逻辑了吧？",
+            "招募系统": "想摇人？准备好水和电。人来了要是不干活，那可是纯纯的造粪机器。",
+            "灾难系统": "外面辐射乱飞，石头乱砸。要是月壤护甲破了，咱们就都成太空垃圾了。",
+            "健康系统": "别让人带病干活，咱们又不是黑心老板。心情差了还会造反，记得多关心大家。"
+        },
+        "warnings": {
+            "co2": "咳咳咳！大哥，你想把我们熏死吗？CO₂ 爆表了，赶紧开洗涤器或者烧点垃圾！",
+            "o2": "喘不上气了...氧气要没了！赶紧弄点微藻或者催熟植物，不然我们要憋死了！",
+            "water": "水管里一滴水都没了！你这是打算让我们集体渴死变成木乃伊吗？赶紧去采水！",
+            "food": "饭呢？锅里连颗土豆渣都没了！再不弄点吃的，大家就要开始生啃控制台了！",
+            "hull": "天呐舱体要裂开了！外面可是真空！赶紧派人去修，我可不想不穿宇航服出门！",
+            "crew": "喂！有人心态崩了或者快病死了，赶紧给他们放个假吃点药，造反了可别怪我没提醒你！"
+        }
+    },
+    "黄部长": {
+        "init_img": "Huang initialize.png", "game_img": "Huang in game.png", "style": "黄部长（严谨理性）",
+        "intro": "指挥官，我是黄部长。一切运作都基于物理法则，请用数据说话，避免感性决策。",
+        "tutorial": {
+            "T0": "指挥官，演练协议已加载。为确保基地存续概率 >99%，请依次验证以下子系统：\n\n- **协议-大气修复**：验证 ECLSS 大气洗涤流转逻辑。\n- **协议-闭环补给**：初始化批次农业参数，观测水循环熵减。\n- **协议-能源调度**：校准光伏阵列输出与负荷的收支平衡。\n- **协议-人才管理**：基于效能倍率分配科研人员进入实验室。\n\n提示：初始医疗耗材已注入您的资源库。",
+            "T1": "【阶段 1：呼吸】协议启动。CO₂ 偏离安全阈值。为了建立长效碳汇，请前往侧边栏【🦠 微藻光水调控】增加光照时长或废水输入，强化微藻的光合固碳效率。调整完毕后，执行【⏳ 闭环演进】观察参数回落。",
+            "T2": "【阶段 2：温饱】口粮储量告急。建立碳水闭环协议。请执行播种指令。植物蒸腾作用是水分流转的核心，随后需建立堆肥舱处理固废，维持‘化肥-作物-废物’的高效闭环。",
+            "T3": "【阶段 3：生存】能源缺口警告，电池余量5%。电池是生命保障系统的基石，断电即死。请立即在侧边栏增加坑外光伏阵列，或者通过研发自动化降低水耗，维持正向收支。",
+            "T4": "【阶段 4：成长】系统物理防御到达瓶颈。工程部已为您极速部署了一座【实验室】。请评估乘组的科研天赋，分配最优人力进入实验室立项，加速 ISRU 护甲研发。",
+            "T5": "【崩溃预演】建立错误决策推演模型：\n\n🚨 **级联故障链**：\n> 电力供给归零 ➡️ ECLSS与光照停机 ➡️ 光合作用中断 ➡️ 碳水闭环崩塌 ➡️ 热控失效致使结构脆化 ➡️ 最终结局：系统不可逆解体。\n\n请务必规避此崩溃路径。医疗物资已发放，训练结束。"
+        },
+        "help": {
+            "居住舱": "基础拓扑单元。承载 2 个人口单位，扩展时请精确计算其带来的边际维护水耗，避免盲目扩张。",
+            "温室舱": "复合型生态单元。除了提供居住容量，还能产出情绪价值（Mood加成）并优化碳水循环效率。",
+            "种植舱": "生物量转化核心。将废水和化肥转化为食物和氧气。请时刻关注其负载上限。",
+            "堆肥舱": "熵减处理器。将系统代谢的废料降解重组为有效肥料，是维持物质守恒的必需设备。",
+            "实验室": "技术迭代平台。科研进度与分配人员的智力天赋呈正相关，请保持至少一个活跃课题以应对衰减。",
+            "微藻光水调控": "高频生物反应器。调节参数以最优化净水回收率与固碳率，注意不要让其超过环境承载力(K值)。",
+            "电力系统": "能量流的基石。严格遵循能量守恒，确保蓄电池余量足以支撑夜间周期的 ECLSS 运作。",
+            "招募系统": "引入新变量。人口增加将同步提升代谢负荷与生产力，请提前规划冗余资源。",
+            "灾难系统": "外部物理扰动。护甲厚度（Shield）将按比例抵消动能冲击与高能辐射，受损后必须指派维修。",
+            "健康系统": "双轨监控机制。生理健康（Health）或心理韧性（Mood）降至零均会触发单位不可逆的丢失。"
+        },
+        "warnings": {
+            "co2": "严重警告：CO₂ 分压已击穿致死阈值。乘组正在发生高碳酸血症，请立即执行降碳干预！",
+            "o2": "危急：氧气浓度持续走低，当前环境不足以维持基础有氧代谢，系统崩溃倒计时已启动！",
+            "water": "水循环即将断裂！净水池余量已无法支撑下一个系统周期的维护耗水，请紧急补充！",
+            "food": "热量储备耗尽。生物单位即将进入饥饿性休克，请立即从温室收割任何可用碳水化合物！",
+            "hull": "结构警告：壳体完整性逼近临界点。若发生减压爆炸，生还概率为 0%，立刻执行维修指令！",
+            "crew": "监测到个别人事单位的生理/心理参数逼近崩溃边缘，为避免减员带来的生产力断层，请及时干预。"
+        }
+    },
+    "罗部长": {
+        "init_img": "Luo initialize.png", "game_img": "Luo in game.png", "style": "罗部长（果敢气质）",
+        "intro": "指挥官，我是罗部长。月球是个难啃的骨头，准备好跟着我征服这片荒原了吗？",
+        "tutorial": {
+            "T0": "听着，指挥官！月球不相信眼泪，想活下去，先通过这项基础生存考验：\n\n- **协议-大气修复**：学会看仪表盘，把憋死人的二氧化碳处理掉。\n- **协议-闭环补给**：播种第一批粮食，搞懂废水和化肥是怎么循环的。\n- **协议-能源调度**：铺设太阳能，保证基地的电力心脏不跳停。\n- **协议-人才管理**：好钢用在刀刃上，把科研人才派进实验室。\n\n提示：拿好这 3 个医疗包，随时准备拼命！",
+            "T1": "【阶段 1：呼吸】指挥官！兄弟们快憋坏了！别光指望排气扇，去侧边栏找到【🦠 微藻光水调控】，给那帮绿藻加足水和光照，让它们把 CO₂ 全吸干净！搞定后按【⏳ 闭环演进】！",
+            "T2": "【阶段 2：温饱】食物见底了！想征服这片荒原，就得自己动手。去左边播种！种出来的植物不仅能吃，还能处理代谢废物。记得把残渣丢进堆肥舱，水和化肥循环起来才是底牌。",
+            "T3": "【阶段 3：生存】警报！电池剩5%！外面辐射再强，没电我们也只能等死。去侧边栏多铺点太阳能板，把电池充满，手里有粮有电，心里才不慌。",
+            "T4": "【阶段 4：成长】外面越来越危险，护甲不够看了！后勤刚给我们强行搭好了一座【实验室】，赶紧把科研好手派进去立项，把 ISRU 护甲搞出来，否则我们连门都不敢出！",
+            "T5": "【崩溃预演】看看如果在战场上失误会有什么后果：\n\n🚨 **毁灭推演**：\n> 断电 ➡️ 供暖与制氧全停 ➡️ 农作物冻死 ➡️ 护甲在严寒中脆裂 ➡️ 基地全面解体。\n\n别让我们走到那一步！拿着这包急救药，准备好大干一场了吗？"
+        },
+        "help": {
+            "居住舱": "我们的营房。让兄弟们有地方睡觉，但建得太多就是在浪费我们宝贵的水资源。",
+            "温室舱": "基地的绿洲！在荒凉的月球上，能看到一片绿色，兄弟们的士气都会高涨不少！",
+            "种植舱": "我们的军粮库。只要种子播下去，废水跟上，我们就有在这个地狱活下去的底气。",
+            "堆肥舱": "垃圾场里的黄金！把废物扔进去，发酵出来的化肥能让我们的作物长得比野草还疯。",
+            "实验室": "军械库！派脑子最灵光的人进去，把护甲和科技堆高，我们才敢跟月球的极端环境硬碰硬。",
+            "微藻光水调控": "水和氧气的源泉。控好废水和光照，微藻就是我们在深空里最可靠的肺！",
+            "电力系统": "去铺面板！坑外的阳光就是我们的黄金。要是遇到沙尘暴没电，就只能烧垃圾应急发电了！",
+            "招募系统": "宇宙开拓需要新鲜血液！只要资源（水和电）够，就把兄弟们接过来，一起干！",
+            "灾难系统": "月球不相信眼泪。流星体和太阳风暴随时会要我们的命，把护甲堆厚点，随时安排人去修复！",
+            "健康系统": "出门采集难免挨辐射。受伤了就赶紧回来休息吃药，养精蓄锐才能走得更远。"
+        },
+        "warnings": {
+            "co2": "指挥官！兄弟们快被 CO₂ 憋死了！立刻启动净化系统或者找点能烧的给植物施碳！",
+            "o2": "氧气供不上了！大家都在大口喘气，立刻催熟温室里的东西，不然全军覆没！",
+            "water": "水库要干了！没有水，兄弟们连汗都流不出来，立刻安排人出舱凿冰！",
+            "food": "没吃的怎么打仗！口粮已经见底了，再不想办法，营地里就要起暴动了！",
+            "hull": "基地外壳快被砸穿了！别管其他的了，立刻把所有人派去修墙，不然全得死！",
+            "crew": "注意！有人撑不住了！无论是受伤还是心态炸裂，赶紧给他们治疗，别抛弃任何一个兄弟！"
+        }
+    }
+}
 
 # 普通人名池（中英混合，避开职业名与政治人物）
 NAME_POOL = [
@@ -505,17 +638,30 @@ def inject_style():
         }
 
         /* expander 卡片 */
-        [data-testid="stExpander"] {
-          background: var(--glass);
-          backdrop-filter: blur(var(--blur));
-          -webkit-backdrop-filter: blur(var(--blur));
-          border: 1px solid var(--glass-border);
-          border-radius: 14px;
-          overflow: hidden;
-          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+        [data-testid="stExpander"], [data-testid="stExpander"] > details {
+          background: var(--glass) !important;
+          backdrop-filter: blur(var(--blur)) !important;
+          -webkit-backdrop-filter: blur(var(--blur)) !important;
+          border: 1px solid var(--glass-border) !important;
+          border-radius: 14px !important;
+          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25) !important;
         }
-        [data-testid="stExpander"] summary { color: var(--text-main); }
-        [data-testid="stExpander"] summary:hover { color: var(--accent); }
+        [data-testid="stExpander"] summary { 
+          background: transparent !important; 
+          color: var(--text-main) !important; 
+        }
+        [data-testid="stExpander"] summary:hover { 
+          color: var(--accent) !important; 
+        }
+        /* 强制覆盖标题文字和下拉箭头的颜色 */
+        [data-testid="stExpander"] summary p { 
+          color: var(--text-main) !important; 
+          font-weight: 600 !important;
+        }
+        [data-testid="stExpander"] summary svg { 
+          color: var(--accent) !important; 
+          fill: var(--accent) !important; 
+        }
 
         /* 数字 / 文本输入框 */
         .stNumberInput input, .stTextInput input, .stTextArea textarea {
@@ -685,6 +831,11 @@ def _initialize_game(o2_tanks, crew_size, hab, plant, compost,
         "Medicine_kg": 5.0,
     }
     st.session_state.history = pd.DataFrame()
+    # === 🆕 新手教程参数初始化 ===
+    st.session_state.current_minister = _minister_choice.split(" ")[0]
+    st.session_state.tutorial_step = 1  # 设置初始步骤为 1
+    st.session_state.state["Medicine_kg"] += 3  # 教程赠送 3 个医疗包
+    # ==============================
     st.session_state.game_started = True
 
 
@@ -693,7 +844,7 @@ if "game_started" not in st.session_state:
 
 # ---------- 开局界面 ----------
 if not st.session_state.game_started:
-    st.title("🌙 天外家园 · v6 天赋 / 医疗 / 建造")
+    st.title("🌙 月球生态部")
     st.markdown("---")
     st.header("🚀 任务初始化")
     st.caption("v6 引入天赋系统、医疗/受伤系统与排队建造工作。开局参数一旦确认将永久锁定。")
@@ -713,6 +864,20 @@ if not st.session_state.game_started:
     st.caption("部长拥有顶级天赋。其余成员姓名与天赋全随机（0~2 个，概率 30%/50%/20%）。")
     _min_keys = list(MINISTERS.keys())
     _minister_choice = st.session_state.get("_init_minister", _min_keys[0])
+    # === 🆕 渲染初始部长立绘 ===
+    # 选人界面立绘
+    # === 🆕 渲染初始部长立绘 ===
+    # 选人界面立绘
+    NAME_MAP = {"annie": "Annie部长", "guo": "郭部长", "huang": "黄部长", "luo": "罗部长"}
+    m_key_init = NAME_MAP.get(_minister_choice, "Annie部长") # 通过翻译官转换 Key
+    
+    import os
+    img_path = MINISTER_DATA[m_key_init]["init_img"]
+    if os.path.exists(img_path):
+        st.image(img_path, width=300, caption=MINISTER_DATA[m_key_init]["style"])
+        st.info(MINISTER_DATA[m_key_init]["intro"])
+    else:
+        st.warning(f"找不到图片文件：{img_path}，请检查文件名或后缀（比如是不是多了一个 .jpg）")
     _mcols = st.columns(len(_min_keys))
     for _ci, _mk in enumerate(_min_keys):
         with _mcols[_ci]:
@@ -1453,7 +1618,48 @@ def step_system(alg_ww, alg_fert, light_h, incinerator_rate, solar_panel_m2,
             st.session_state.is_alive = False; st.session_state.death_reason = "口粮断绝"; break
         if s["hull_integrity"] <= 0:
             st.session_state.is_alive = False; st.session_state.death_reason = "壳体结构失效"; break
+        # ... 上面是已有的结算和存入 history 的代码 ...
+        if len(st.session_state.crew_list) == 0:
+            st.session_state.is_alive = False
+            st.session_state.death_reason = "全员死亡或叛逃，基地荒废。"
+            break
+        if final_CO2_pct > 3.0:
+            st.session_state.is_alive = False; st.session_state.death_reason = "CO2 毒性崩溃"; break
+        if final_O2_pct < 18.0:
+            st.session_state.is_alive = False; st.session_state.death_reason = "缺氧崩溃"; break
+        if s["Clean_Water_kg"] < 0:
+            st.session_state.is_alive = False; st.session_state.death_reason = "饮用水枯竭"; break
+        if s["Food_kg"] < 0:
+            st.session_state.is_alive = False; st.session_state.death_reason = "口粮断绝"; break
+        if s["hull_integrity"] <= 0:
+            st.session_state.is_alive = False; st.session_state.death_reason = "壳体结构失效"; break
 
+        # === 🆕 加入多日推演·智能刹车机制 ===
+        # 如果玩家选择了一次性跳过多天，且当前不是跳跃的最后一天
+        if days_step > 1 and _ < days_step - 1:
+            crit_warn = False
+            if final_CO2_pct > 2.0: crit_warn = True
+            if final_O2_pct < 18.5: crit_warn = True
+            if s["Clean_Water_kg"] < 50.0: crit_warn = True
+            if s["Food_kg"] < 15.0: crit_warn = True
+            if s["hull_integrity"] < 30.0: crit_warn = True
+            for m in st.session_state.crew_list:
+                if m["mood"] < 30 or m["health"] < 30:
+                    crit_warn = True
+            
+            # 只要触发任何一项致命预警，强行终止后续的跳跃演进
+            if crit_warn:
+                st.session_state.event_log.append({
+                    "day": st.session_state.day, 
+                    "name": "🛑 系统强制暂停", 
+                    "desc": f"检测到基地处于高危状态，已自动为您打断剩余的 {days_step - 1 - _} 天推演！请立即处理危机。"
+                })
+                # 👇 终极修复：重置天数为1，并且升级滑块版本号，强制前端刷新！
+                st.session_state._step_n = 1
+                st.session_state.slider_version = st.session_state.get("slider_version", 0) + 1
+                # 👆 
+                break
+        # ========================================
 
 # ==========================================
 # 前端
@@ -1466,22 +1672,203 @@ with st.sidebar:
                f"实{st.session_state.last_lab}/温{st.session_state.last_greenhouse}")
     st.markdown("---")
 
-st.header("🌙 天外家园 · v6")
-st.caption("天赋系统 · 医疗/受伤 · 排队建造 · 药物生产链")
+st.header("🌙 月球生态部")
+if not st.session_state.is_alive:
+    st.error(f"## 💀 生物圈已彻底崩溃！\n**终结原委：** {st.session_state.death_reason}")
+    if st.button("🔄 重新开始 (初始化新基地)", type="primary", use_container_width=True, key="restart_top_btn"):
+        for key in list(st.session_state.keys()):
+            del st.session_state[key]
+        st.rerun()
+    st.markdown("---")
+#st.caption("天赋系统 · 医疗/受伤 · 排队建造 · 药物生产链")
+# ============================================================
+# 🆕 领航员通讯频道与全站危机侦测 (互动式新手教程 / 预警)
+# ============================================================
+m_key_internal = st.session_state.current_minister
+NAME_MAP = {"annie": "Annie部长", "guo": "郭部长", "huang": "黄部长", "luo": "罗部长"}
+m_key_cn = NAME_MAP.get(m_key_internal, "Annie部长")
+
+# 1. 提前侦测全局危险（用于置顶报警和全站特效）
+mood_danger = [c["name"] for c in st.session_state.crew_list if c["mood"] < 40]
+health_danger = [c["name"] for c in st.session_state.crew_list if c["health"] < 40]
+
+warning_box = []
+if st.session_state.is_alive and not st.session_state.history.empty:
+    cur_chk = st.session_state.history.iloc[-1]
+    hull_chk = st.session_state.state.get("hull_integrity", 100.0)
+    if cur_chk['CO2_percent'] > 2.0:   warning_box.append(MINISTER_DATA[m_key_cn]["warnings"]["co2"])
+    if cur_chk['O2_percent'] < 18.5:   warning_box.append(MINISTER_DATA[m_key_cn]["warnings"]["o2"])
+    if cur_chk['Clean_Water'] < 50.0:  warning_box.append(MINISTER_DATA[m_key_cn]["warnings"]["water"])
+    if cur_chk['Food'] < 15.0:         warning_box.append(MINISTER_DATA[m_key_cn]["warnings"]["food"])
+    if hull_chk < 30.0:                warning_box.append(MINISTER_DATA[m_key_cn]["warnings"]["hull"])
+    if mood_danger or health_danger:   warning_box.append(MINISTER_DATA[m_key_cn]["warnings"]["crew"])
+
+# 🆕 全站红光警报特效 (除了部长，环境本身给出压迫感)
+if warning_box and st.session_state.is_alive:
+    st.markdown("""<style>.stApp { box-shadow: inset 0 0 120px rgba(220, 38, 38, 0.25); }</style>""", unsafe_allow_html=True)
+
+# 2. 判断部长存活
+minister_alive = True
+minister_real_name = MINISTERS[m_key_internal]["name"].split(" ")[0]
+for c in st.session_state.crew_list:
+    if c["name"].startswith(minister_real_name) and c["health"] <= 0:
+        minister_alive = False
+
+if not minister_alive and st.session_state.is_alive:
+    with st.expander("📡 领航员通讯频道：[无响应]", expanded=True):
+        col_img, col_txt = st.columns([1, 5])
+        col_img.caption("⬛ [信号已丢失]")
+        col_txt.error(f"### ⚠️ 严重错误：连接中断\n\n系统已丢失与 {m_key_cn} 的生物特征连接。其已阵亡或离队，通讯通道永久冻结。")
+else:
+    is_tutorial_active = st.session_state.get("tutorial_step", 0) <= 5
+    force_expand = is_tutorial_active or len(warning_box) > 0
+    
+    with st.expander(f"💬 领航员通讯频道：{m_key_cn}", expanded=force_expand):
+        col_img, col_txt = st.columns([1, 5])
+        try:
+            col_img.image(MINISTER_DATA[m_key_cn]["game_img"], use_container_width=True)
+        except:
+            col_img.caption("[图片未找到]")
+
+        tabs_names = ["🎯 模拟训练协议", "📚 基地系统百科"]
+        if warning_box: tabs_names.insert(0, "🚨 紧急事态拦截")
+            
+        active_tabs = col_txt.tabs(tabs_names)
+        
+        if warning_box:
+            tab_warn, tab_tut, tab_enc = active_tabs[0], active_tabs[1], active_tabs[2]
+            with tab_warn:
+                st.error("### 🔴 全站最高级别警报")
+                for w in warning_box:
+                    st.warning(f"**{m_key_cn}**：{w}")
+        else:
+            tab_tut, tab_enc = active_tabs[0], active_tabs[1]
+
+        with tab_tut:
+            if is_tutorial_active:
+                step = st.session_state.tutorial_step
+                dialogue = MINISTER_DATA[m_key_cn]["tutorial"].get(f"T{step}", "")
+                
+                if step == 0: st.markdown("### 📋 入职模拟训练协议")
+                elif step == 5: st.markdown("### 💥 严重操作失误崩溃预演")
+                else: st.markdown(f"### 🎯 训练阶段 {step} / 4")
+                st.success(f"**{m_key_cn}**: \"{dialogue}\"")
+                
+                condition_met = False
+                if step == 0: condition_met = True
+                elif step == 1:
+                    changed_algae = st.session_state.get("tutorial_light_h", 16) > 16 or st.session_state.get("tutorial_alg_ww", 20.0) > 20.0
+                    clicked_evolve = st.session_state.get("evolve_top", False)
+                    condition_met = changed_algae and (st.session_state.day > 0 or clicked_evolve)
+                    st.info("👉 **行动引导**：CO₂ 已经超标爆红。请前往侧边栏【🦠 微藻光水调控】，将光照时长调大（>16），然后回到页面上方点击【⏳ 闭环演进】让微藻发挥作用。")
+                elif step == 2:
+                    condition_met = len(st.session_state.crop_batches) > 0
+                    st.info("👉 **行动引导**：食物库存见底了！去左侧边栏【🌱 批次农业播种中心】，选一种作物并点击【🚜 下达播种指令】。")
+                elif step == 3:
+                    current_solar = float(st.session_state.get("solar_panel_m2_input", st.session_state.solar_panel_m2))
+                    condition_met = current_solar > 100.0
+                    st.info("👉 **行动引导**：电池快没电了！去左侧边栏【⚡ 电力系统】把【☀️ 坑外光伏面积】加大。")
+                elif step == 4:
+                    condition_met = any(p.get("project") for p in st.session_state.lab_projects)
+                    st.info("👉 **行动引导**：系统已空投实验室！请向下滑动到【乘组工作分配】，把一名成员工作设为“🔬 科研”；接着去左侧边栏【🔬 科研课题立项】派他去研究！")
+                elif step == 5: condition_met = True
+
+                def advance_tutorial():
+                    st.session_state.tutorial_step += 1
+                    new_step = st.session_state.tutorial_step
+                    s = st.session_state.state
+                    vol = (st.session_state.last_hab * VOL_HABITAT + st.session_state.last_plant * VOL_PLANT + 
+                           st.session_state.last_compost * VOL_COMPOST + st.session_state.last_lab * VOL_LAB + 
+                           st.session_state.last_greenhouse * VOL_GREENHOUSE)
+                    if new_step == 1: s["CO2_kg"] = 2.8 / 100 * vol * DENSITY_CO2
+                    elif new_step == 2:
+                        s["CO2_kg"] = 0.1 / 100 * vol * DENSITY_CO2; s["Food_kg"] = 2.0
+                    elif new_step == 3:
+                        s["Food_kg"] = 80.0; s["Power_Battery_kWh"] = s["Power_Battery_Cap_kWh"] * 0.05
+                    elif new_step == 4:
+                        s["Power_Battery_kWh"] = s["Power_Battery_Cap_kWh"]; s["hull_integrity"] = 55.0
+                        if st.session_state.last_lab == 0: st.session_state.last_lab = 1; sync_lab_count(1)
+                    elif new_step > 4: s["hull_integrity"] = 100.0
+
+                btn_col1, btn_col2 = st.columns(2)
+                if step < 5:
+                    if condition_met:
+                        if btn_col1.button("✅ 目标达成，进入下一阶段", type="primary", use_container_width=True):
+                            advance_tutorial(); st.rerun()
+                    else:
+                        btn_col1.button("⚠️ 请先完成上方指示的行动", disabled=True, use_container_width=True)
+                    if btn_col2.button("⏭️ 跳过新手教程", use_container_width=True):
+                        st.session_state.tutorial_step = 6
+                        s = st.session_state.state
+                        vol = (st.session_state.last_hab * VOL_HABITAT + st.session_state.last_plant * VOL_PLANT + st.session_state.last_compost * VOL_COMPOST + st.session_state.last_lab * VOL_LAB + st.session_state.last_greenhouse * VOL_GREENHOUSE)
+                        s["CO2_kg"] = 0.15 / 100 * vol * DENSITY_CO2; s["Food_kg"] = 80.0; s["Power_Battery_kWh"] = s["Power_Battery_Cap_kWh"]; s["hull_integrity"] = 100.0
+                        st.rerun()
+                else:
+                    if btn_col1.button("🚀 结束预演，正式接管基地！", type="primary", use_container_width=True):
+                        advance_tutorial(); st.rerun()
+            else:
+                st.info("🎯 新手模拟训练协议已完成。干得漂亮，指挥官！")
+                if st.button("🔄 重新进行新手预演"): st.session_state.tutorial_step = 0; st.rerun()
+
+        with tab_enc:
+            st.markdown("### 📚 基地系统资料库")
+            help_topic = st.selectbox("需要查阅哪部分资料？", ["居住舱", "温室舱", "种植舱", "堆肥舱", "实验室", "微藻光水调控", "电力系统", "招募系统", "灾难系统", "健康系统"])
+            st.info(f"**{m_key_cn}**: \"{MINISTER_DATA[m_key_cn]['help'][help_topic]}\"")
+# ============================================================
 
 # ---------- 页面最上方：一键推进时间 ----------
-_run_c1, _run_c2 = st.columns([1, 2])
+_run_c1, _run_c2, _run_c3, _run_c4 = st.columns([1.5, 1, 1, 1.5])
 with _run_c1:
-    if st.button("⏳ 闭环演进 (时间流逝)", type="primary",
+    st.markdown(f"### 📅 运行天数：**第 {st.session_state.day} 天**")
+    st.caption(f"在岗 {len(st.session_state.crew_list)} 人 | 居住舱: {st.session_state.last_hab} | 温室: {st.session_state.last_greenhouse}")
+with _run_c2:
+    if st.button("⏳ 闭环演进", type="primary",
                  use_container_width=True, key="evolve_top",
                  disabled=not st.session_state.is_alive):
         st.session_state._do_step = True
-with _run_c2:
-    _step_top = st.slider("推演时间跨度 (天 · 可跳跃加速)", 1, 30,
+with _run_c3:
+    if st.button("🚨 重置基地",type="primary", use_container_width=True, help="放弃当前存档，返回初始配置界面"):
+        for key in list(st.session_state.keys()):
+            del st.session_state[key]
+        st.rerun()
+with _run_c4:
+    # 👇 获取当前滑块的版本号（默认是0）
+    s_ver = st.session_state.get("slider_version", 0)
+    
+    _step_top = st.slider("推演时间跨度 (天)", 1, 30,
                           int(st.session_state.get("_step_n", 5)),
-                          key="step_slider_top")
+                          key=f"step_slider_top_{s_ver}") # 👈 动态生成 Key
     st.session_state._step_n = _step_top
 st.markdown("---")
+
+
+# 👇👇👇 新增：基地核心态势感知看板 (最高优先级置顶) 👇👇👇
+if not st.session_state.history.empty:
+    # 1. 进行中的异常事件
+    if st.session_state.active_events:
+        active_names = [EVENT_LIBRARY[e["key"]]["name"] + f"(剩{e['days_left']}天)" for e in st.session_state.active_events if e["key"] in EVENT_LIBRARY]
+        if active_names:
+            st.warning("🔴 **进行中的异常事件**：" + " ｜ ".join(active_names))
+    
+    # 2. 壳体结构完整性血条
+    hull_top = st.session_state.state.get("hull_integrity", 100.0)
+    st.progress(max(0.0, min(1.0, hull_top / 100.0)), text=f"🛡️ 壳体结构完整性 σ：{hull_top:.1f} / 100")
+    
+    # 3. 人员崩溃边缘警告
+    mood_danger = [c["name"] for c in st.session_state.crew_list if c["mood"] < 40]
+    health_danger = [c["name"] for c in st.session_state.crew_list if c["health"] < 40]
+    if mood_danger:
+        st.error(f"🚨 **心情崩溃边缘**：{', '.join(mood_danger)} —— 心情降至 0 将永久叛逃！")
+    if health_danger:
+        st.error(f"🚨 **健康崩溃边缘**：{', '.join(health_danger)} —— 健康=0 将永久死亡，请立即安排休息或就医！")
+    
+    # 4. 基地历史日志 (展开显示)
+    if st.session_state.event_log:
+        with st.expander("📜 日志 (最近 15 条)",expanded=True):
+            for e in reversed(st.session_state.event_log[-15:]):
+                st.markdown(f"**第 {e['day']} 天 — {e['name']}** \n　{e['desc']}")
+st.markdown("---")
+# 👆👆👆 置顶结束 👆👆👆
 
 def _mood_health_tier(v):
     if v > 70:  return "✅"
@@ -1497,6 +1884,9 @@ def _sick_badge(m):
     elif i == "heavy": out.append("🚑 重伤")
     return " · ".join(out) if out else "—"
 
+st.markdown("---")
+
+# 接着才是原来的乘组分配
 st.subheader("👥 乘组工作分配")
 st.caption("每位乘员每天选 1 项工作；产出按边际递减并叠加天赋倍率。带伤病可工作，但效率随健康下降，且健康会继续掉。"
            "「🔬科研」必须通过侧边栏「科研课题立项」派遣。")
@@ -1546,6 +1936,28 @@ for _row_start in range(0, _crew_n, _per_row):
                     st.caption(JOBS[_new_job]["desc"])
 st.markdown("---")
 
+# 🆕 把科研课题状态移到这里
+completed_top = st.session_state.state.get("completed_research", [])
+with st.expander(f"🔬 科研课题状态 (进行中 {sum(1 for p in st.session_state.lab_projects if p.get('project'))} · 已完成 {len(completed_top)})", expanded=True):
+    if st.session_state.lab_projects:
+        for idx, proj in enumerate(st.session_state.lab_projects):
+            key = proj.get("project")
+            if key and key in RESEARCH_LIBRARY:
+                spec = RESEARCH_LIBRARY[key]
+                pct = min(1.0, proj["progress"] / spec["cycle"])
+                _names = [st.session_state.crew_list[ci]["name"] for ci in proj.get("assigned_crew", []) if 0 <= ci < len(st.session_state.crew_list)]
+                _team = "、".join(_names) if _names else "无人在岗"
+                st.progress(pct, text=f"实验室 #{idx + 1} · {spec['name']} · {proj['progress']:.1f}/{spec['cycle']} · {_team}")
+            else:
+                st.caption(f"实验室 #{idx + 1} · 空闲")
+    if completed_top:
+        st.markdown("**🏆 已完成课题：**")
+        st.markdown("  \n".join(f"- {RESEARCH_LIBRARY[k]['name']}" for k in completed_top if k in RESEARCH_LIBRARY))
+
+st.markdown("---")
+
+# ============================================================
+
 with st.sidebar:
     st.header("🔒 任务约束 (开局已锁定)")
     _lk = st.session_state.locked_initial
@@ -1593,6 +2005,7 @@ with st.sidebar:
     st.header("⚡ 电力系统")
     solar_panel_m2 = st.number_input("☀️ 坑外光伏面积 (m²)", min_value=0.0,
                                      value=float(st.session_state.solar_panel_m2), step=20.0,
+                                     key="solar_panel_m2_input",  # 👈 必须加上这行 key
                                      help=f"{SOLAR_KWH_PER_M2_HOUR:.3f} kWh/m²/h × 日照时长 × 效率倍率。")
     st.session_state.solar_panel_m2 = solar_panel_m2
 
@@ -1619,15 +2032,15 @@ with st.sidebar:
 
     st.markdown("---")
     st.header("🛡️ 应急脱困")
-    st.caption("v6 已移除「排向月壤」选项，仅保留焚化炉应急。")
     incinerator_rate = st.number_input("🔥 固废高温催化炉 (kg/天)", min_value=0.0, value=0.0, step=2.0,
                                        help="燃烧垃圾和氧气，释放 CO2 挽救植物碳饥饿；并补充少量电力。")
 
     st.markdown("---")
     st.header("🦠 微藻光水调控")
-    alg_ww = st.number_input("微藻废水通量 (kg/天)", min_value=0.0, value=20.0, step=10.0)
-    alg_fert = st.number_input("微藻施肥量 (kg/天)", min_value=0.0, value=0.5, step=0.5)
-    light_h = st.slider("光照时长 (h/day)", 0, 24, 16)
+    # 🆕 加上了 key="tutorial_alg_ww" 等属性，方便教程系统读取玩家的操作
+    alg_ww = st.number_input("微藻废水通量 (kg/天)", min_value=0.0, value=20.0, step=10.0, key="tutorial_alg_ww")
+    alg_fert = st.number_input("微藻施肥量 (kg/天)", min_value=0.0, value=0.5, step=0.5, key="tutorial_alg_fert")
+    light_h = st.slider("光照时长 (h/day)", 0, 24, 16, key="tutorial_light_h")
 
     st.markdown("---")
     st.header("🔬 科研课题立项")
@@ -1710,27 +2123,13 @@ if st.session_state.pop("_do_step", False):
     step_system(alg_ww, alg_fert, light_h, incinerator_rate, solar_panel_m2,
                 int(st.session_state.get("_step_n", 5)),
                 st.session_state.event_chance)
+    st.rerun()  # 👈 新增这一行！强制系统刷新，让上面的部长瞬间拿到最新情报！
 
-if not st.session_state.is_alive:
-    st.error(f"💀 生物圈崩溃！原委：{st.session_state.death_reason}")
-    if st.button("🔄 初始化新基地"):
-        for key in list(st.session_state.keys()):
-            del st.session_state[key]
-        st.rerun()
 
 if not st.session_state.history.empty:
     cur = st.session_state.history.iloc[-1]
     cur_max_ww = st.session_state.last_plant * 150.0 + st.session_state.last_compost * 50.0 + 50.0
     cur_max_sw = st.session_state.last_compost * 30.0 + 10.0
-
-    if st.session_state.active_events:
-        active_names = [EVENT_LIBRARY[e["key"]]["name"] + f"(剩{e['days_left']}天)"
-                        for e in st.session_state.active_events if e["key"] in EVENT_LIBRARY]
-        if active_names:
-            st.warning("🔴 进行中的事件：" + " ｜ ".join(active_names))
-
-    hull = st.session_state.state.get("hull_integrity", 100.0)
-    st.progress(max(0.0, min(1.0, hull / 100.0)), text=f"🛡️ 壳体结构完整性 σ：{hull:.1f} / 100")
 
     with st.expander("🌾 农作物实时生长监控大屏", expanded=True):
         if len(st.session_state.crop_batches) == 0:
@@ -1751,6 +2150,30 @@ if not st.session_state.history.empty:
             st.table(pd.DataFrame(display_data))
 
     st.subheader("📊 实时生态雷达")
+    
+    # # === 🆕 强力危机动态拦截预警 ===
+    # if st.session_state.is_alive and not st.session_state.history.empty:
+    #     warning_box = []
+    #     if cur['CO2_percent'] > 2.0:
+    #         warning_box.append(MINISTER_DATA[m_key_cn]["warnings"]["co2"])
+    #     if cur['O2_percent'] < 18.5:
+    #         warning_box.append(MINISTER_DATA[m_key_cn]["warnings"]["o2"])
+    #     if cur['Clean_Water'] < 50.0:
+    #         warning_box.append(MINISTER_DATA[m_key_cn]["warnings"]["water"])
+    #     if cur['Food'] < 15.0:
+    #         warning_box.append(MINISTER_DATA[m_key_cn]["warnings"]["food"])
+    #     if hull < 30.0:
+    #         warning_box.append(MINISTER_DATA[m_key_cn]["warnings"]["hull"])
+            
+    #     crew_danger = [c for c in st.session_state.crew_list if c["mood"] < 30 or c["health"] < 30]
+    #     if crew_danger:
+    #         warning_box.append(MINISTER_DATA[m_key_cn]["warnings"]["crew"])
+            
+    #     if warning_box:
+    #         st.error("### 🚨 基地高危警报！")
+    #         for w_msg in warning_box:
+    #             st.warning(f"**{m_key_cn}**：{w_msg}")
+    # # ============================
     avg_m = cur['Mood']
     mood_status = "✅ 士气高昂" if avg_m > 70 else ("⚠️ 幽闭焦虑" if avg_m > 40 else "🚨 叛乱边缘")
     co2_val = cur['CO2_percent']
@@ -1765,34 +2188,19 @@ if not st.session_state.history.empty:
     c4.metric("备用高压碳源", f"{cur['CO2_Tank']:.1f} kg")
     c5.metric("团队心理韧性 (均值)", f"{cur['Mood']:.1f} / 100", mood_status)
 
-    def _tier_label(v):
-        if v > 70: return "✅ 良好"
-        if v >= 40: return "⚠️ 警戒"
-        return "🚨 崩溃边缘"
+    # def _tier_label(v):
+    #     if v > 70: return "✅ 良好"
+    #     if v >= 40: return "⚠️ 警戒"
+    #     return "🚨 崩溃边缘"
 
-    mood_danger = [c["name"] for c in st.session_state.crew_list if c["mood"] < 40]
-    health_danger = [c["name"] for c in st.session_state.crew_list if c["health"] < 40]
-    if mood_danger:
-        st.error(f"🚨 心情崩溃边缘：{', '.join(mood_danger)} —— 心情=0 将永久叛逃！")
-    if health_danger:
-        st.error(f"🚨 健康崩溃边缘：{', '.join(health_danger)} —— 健康=0 将永久死亡，让他们休息或就医！")
+    # mood_danger = [c["name"] for c in st.session_state.crew_list if c["mood"] < 40]
+    # health_danger = [c["name"] for c in st.session_state.crew_list if c["health"] < 40]
+    # if mood_danger:
+    #     st.error(f"🚨 心情崩溃边缘：{', '.join(mood_danger)} —— 心情=0 将永久叛逃！")
+    # if health_danger:
+    #     st.error(f"🚨 健康崩溃边缘：{', '.join(health_danger)} —— 健康=0 将永久死亡，让他们休息或就医！")
 
-    with st.expander("🧠 乘组个体状态明细", expanded=False):
-        rows = []
-        for c in st.session_state.crew_list:
-            _jk = c.get("job", JOB_DEFAULT)
-            _tm = _crew_talent_mult(c, _jk)
-            rows.append({
-                "姓名": c["name"],
-                "天赋": _format_talents(c.get("talents", [])),
-                "体质": f"{c.get('constitution', 1.0):.2f}",
-                "心情": f"{c['mood']:.1f}", "心情状态": _tier_label(c["mood"]),
-                "健康": f"{c['health']:.1f}", "健康状态": _tier_label(c["health"]),
-                "今日工作": JOBS.get(_jk, {"name": "?"})["name"] + (f" ✨×{_tm:.2f}" if _tm > 1.0 else ""),
-                "伤病": _sick_badge(c),
-            })
-        st.table(pd.DataFrame(rows))
-
+    
     st.markdown("<br>", unsafe_allow_html=True)
     # 🆕 v6 资源面板：含药材/药物
     c6, c7, c8, c9, c10, c11 = st.columns(6)
@@ -1848,12 +2256,6 @@ if not st.session_state.history.empty:
             st.markdown("**🏆 已完成课题：**")
             st.markdown("  \n".join(f"- {RESEARCH_LIBRARY[k]['name']}" for k in completed if k in RESEARCH_LIBRARY))
 
-    if st.session_state.event_log:
-        with st.expander("📜 事件 / 医疗 / 完工 日志 (最近 15 条)", expanded=True):
-            for e in reversed(st.session_state.event_log[-15:]):
-                st.markdown(f"**第 {e['day']} 天 — {e['name']}**  \n　{e['desc']}")
-
-    st.markdown("---")
 
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(20, 5))
     days_axis = st.session_state.history["Day"]
