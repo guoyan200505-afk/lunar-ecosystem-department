@@ -884,7 +884,7 @@ if not st.session_state.game_started:
             if st.button(MINISTERS[_mk]["name"], use_container_width=True, key=f"minister_btn_{_mk}"):
                 st.session_state._init_minister = _mk
                 _minister_choice = _mk
-                st.rerun
+                st.rerun()
             st.caption(MINISTERS[_mk]["desc"])
     st.info(f"当前选择：**{MINISTERS[_minister_choice]['name']}** — {MINISTERS[_minister_choice]['desc']}")
     st.session_state._init_minister = _minister_choice
